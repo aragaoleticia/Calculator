@@ -1,11 +1,11 @@
 import React from 'react';
 import OutputScreenRow from './OutputScreenRow';
 
-function OutputScreen({question, anwser}) {
+function OutputScreen({question, answer}) {
   return (
     <div>
       <OutputScreenRow value={question}/>
-      <OutputScreenRow value={anwser}/>
+      <OutputScreenRow value={answer}/>
     </div>
   )
 };
