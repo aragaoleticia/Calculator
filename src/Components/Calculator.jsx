@@ -1,44 +1,41 @@
 import React, { useState } from 'react';
 import Button from './Button'
 import OutputScreen from './OutputScreen';
+import { evaluate } from "mathjs";
 
 function Calculator() {
 
-  const [input, setInput] = useState({
-    question: '',
-    answer: ''
-  });
+  const [input, setInput] = useState('');
 
   const handleClick = (event) => {
-    const value = event.target.value;
+    const calculate = event.target.value;
     
-    switch(value) {
+    switch(calculate) {
       case '=': {
-        if(input.question !== '') {
-          let result = '';
+        if(input !== '') {
           try {
-            result = eval(input.question);
+            const result = evaluate(input);
+            setInput(result.toString());
 
           }catch(err){
-            setInput({answer: 'Math error', question: ''});
+            setInput('Math error');
           }
-          if(result === undefined) {
-            setInput({answer: 'Math error'})
-          } 
-          else {
-            setInput({answer: result, question: ''})
-          } 
         }
         break
       }
 
       case 'Clear': {
-        setInput({answer: '', question: ''})
+        setInput('');
+        break
+      }
+
+      case 'Delete': {
+        setInput(prevInput => prevInput.slice(0,-1))
         break
       }
 
       default: {
-        setInput({question: (input.question += value)})
+        setInput(prevInput => prevInput += calculate);
         break
       }
     }
@@ -48,10 +45,11 @@ function Calculator() {
 
   return (
     <div className='flex justify-center flex-col items-center mt-10 '>
-    <OutputScreen question={input.question} answer={input.answer}/>
+    <OutputScreen answer={input}/>
     <div className='flex flex-1 flex-row gap-6 lg:pl-5 mt-5 w-full justify-center '>
       <div>
         <Button handleClick={handleClick} label={'Clear'}/>
+        <Button handleClick={handleClick} label={'Delete'}/>
         <Button handleClick={handleClick} label={'.'}/>
         <Button handleClick={handleClick} label={'/'}/>
       </div>
