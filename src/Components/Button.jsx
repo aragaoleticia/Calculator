@@ -9,7 +9,7 @@ function Button({label, handleClick}) {
     <div>
       <div>
         <input
-          className='bg-red-500 text-white rounded-full px-6 py-2 font-semibold' 
+          className='bg-orange-500 hover:bg-orange-300 text-gray-200 text-3xl rounded-full px-8 py-6 font-semibold flex items-center' 
           type='button' 
           value={label}
           onClick={handleClick}
