@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function Button({label, handleClick}) {
+function Button({label, handleClick, className}) {
 
 
 
@@ -9,7 +9,7 @@ function Button({label, handleClick}) {
     <div>
       <div>
         <input
-          className='bg-orange-500 hover:bg-orange-300 text-gray-200 text-3xl rounded-full px-8 py-6 font-semibold flex items-center' 
+          className={`${className} w-20 h-20 mt-2 text-gray-200 text-3xl rounded-full px-7 py-5 font-semibold flex justify-center items-center`} 
           type='button' 
           value={label}
           onClick={handleClick}
