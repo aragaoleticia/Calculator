@@ -44,37 +44,39 @@ function Calculator() {
 
 
   return (
-    <div className='flex justify-center flex-col items-center mt-40 box-content h-50 w-50 p-4'>
-      <div className='bg-neutral-800 p-7'>
+    <div className='flex justify-center flex-col items-center rounded-md mt-40 box-content h-50 w-50 p-4'>
+      <div className='bg-gray-200 p-7 rounded-lg'>
       <OutputScreen answer={input}/>
       <div className='flex flex-1 flex-row gap-6 lg:pl-5 mt-5 p-4 w-400 justify-center'>
         
         <div>
-          <Button handleClick={handleClick} label={'AC'} className='bg-red-500 hover:bg-red-600'/>
-          <Button handleClick={handleClick} label={'7'} className='bg-neutral-600 hover:bg-neutral-400'/>
-          <Button handleClick={handleClick} label={'4'} className='bg-neutral-600 hover:bg-neutral-400'/>
-          <Button handleClick={handleClick} label={'1'} className='bg-neutral-600 hover:bg-neutral-400'/>
-          <Button handleClick={handleClick} label={'0'} className='absolute pr-40 bg-neutral-600 hover:bg-neutral-400'/>
+          <Button handleClick={handleClick} label={'AC'} className='bg-blue-100 text-blue-500 hover:bg-blue-200'/>
+          <Button handleClick={handleClick} label={'7'} className=''/>
+          <Button handleClick={handleClick} label={'4'} className=''/>
+          <Button handleClick={handleClick} label={'1'} className=''/>
+          <Button handleClick={handleClick} label={'0'} className=''/>
         </div>
         <div>
-          <Button handleClick={handleClick} label={'Del'} className='bg-zinc-400 hover:bg-zinc-500'/>
-          <Button handleClick={handleClick} label={'8'} className='bg-neutral-600 hover:bg-neutral-400'/>
-          <Button handleClick={handleClick} label={'5'} className='bg-neutral-600 hover:bg-neutral-400'/>
-          <Button handleClick={handleClick} label={'2'} className='bg-neutral-600 hover:bg-neutral-400'/>
+          <Button handleClick={handleClick} label={'Del'} className='bg-blue-100 text-blue-500 hover:bg-blue-200'/>
+          <Button handleClick={handleClick} label={'8'} className=''/>
+          <Button handleClick={handleClick} label={'5'} className=''/>
+          <Button handleClick={handleClick} label={'2'} className=''/>
+          <Button handleClick={handleClick} label={'.'} className=''/>
         </div>
         <div>
-          <Button handleClick={handleClick} label={'%'} className='bg-zinc-400 hover:bg-zinc-500'/>
-          <Button handleClick={handleClick} label={'9'} className='bg-neutral-600 hover:bg-neutral-400'/>
-          <Button handleClick={handleClick} label={'6'} className='bg-neutral-600 hover:bg-neutral-400'/>
-          <Button handleClick={handleClick} label={'3'} className='bg-neutral-600 hover:bg-neutral-400'/>
-          <Button handleClick={handleClick} label={'.'} className='bg-neutral-600 hover:bg-neutral-400'/>
+          <Button handleClick={handleClick} label={'%'} className='bg-blue-100 text-blue-500'/>
+          <Button handleClick={handleClick} label={'9'} className=''/>
+          <Button handleClick={handleClick} label={'6'} className=''/>
+          <Button handleClick={handleClick} label={'3'} className=''/>
+          <Button handleClick={handleClick} label={'='} className='absolute pl-40 bg-blue-400 text-white hover:bg-blue-300 text-center'/>
+          
         </div>
         <div>
-          <Button handleClick={handleClick} label={'/'} className='bg-orange-500 hover:bg-orange-300'/>
-          <Button handleClick={handleClick} label={'*'} className='bg-orange-500 hover:bg-orange-300'/>
-          <Button handleClick={handleClick} label={'-'} className='bg-orange-500 hover:bg-orange-300'/>
-          <Button handleClick={handleClick} label={'+'} className='bg-orange-500 hover:bg-orange-300'/>
-          <Button handleClick={handleClick} label={'='} className='bg-orange-500 hover:bg-orange-300'/>
+          <Button handleClick={handleClick} label={'/'} className='bg-blue-100 text-blue-500 hover:bg-blue-200'/>
+          <Button handleClick={handleClick} label={'*'} className='bg-blue-100 text-blue-500 hover:bg-blue-200'/>
+          <Button handleClick={handleClick} label={'-'} className='bg-blue-100 text-blue-500 hover:bg-blue-200'/>
+          <Button handleClick={handleClick} label={'+'} className='bg-blue-100 text-blue-500 hover:bg-blue-200'/>
+          
         </div>
 
       </div>
