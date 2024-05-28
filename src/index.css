@@ -12,8 +12,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #4b5563;
-  background: rgb(163,167,167);
-  background: radial-gradient(circle, rgba(163,167,167,1) 0%, rgba(193,198,199,1) 0%, rgba(211,214,214,1) 42%, rgba(107,114,115,1) 100%);
+  background: rgb(167,167,167);
+background: radial-gradient(circle, rgba(167,167,167,1) 0%, rgba(204,203,203,1) 0%, rgba(172,177,175,1) 28%, rgba(107,114,115,1) 100%);
 }
 
 code {

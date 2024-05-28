@@ -1,15 +1,16 @@
 import React from 'react';
 
-function OutputScreenRow({value}) {
+function OutputScreenRow({answer}) {
   return (
     <div>
       <input 
-        className='flex-1 text-3xl border-2 outline-none px-5 py-7 rounded-2xl text-end bg-gray-200' 
+        className='text-end text-rose-500 text-3xl font-semibold py-10 rounded-t-lg bg-stone-100' 
         type='text' 
         placeholder='0'
         readOnly
-        value={value}
+        value={answer}
       />
+      
     </div>
   )
 }
